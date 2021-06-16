@@ -1,0 +1,45 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color:#e6bb2d;
+}
+#contenedor-base{
+    color:#E3AD03;    
+    background-color:#E66B2D;
+    margin: 5px 5px 5px 5px;
+    border-radius: 20%;
+}
+#nav-base{   
+    background-color:#ff2f2f; 
+}
+#contenedor-cuerpo{
+    background-color: #E3AD03;
+    margin-top: 30px;
+    padding: 20px 20px 20px 20px;
+    border: solid;
+    border-width: 2px 4px;
+    border-radius: 40px;
+}
+#contenedor-titulo{
+    width: 350px;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #E66B2D;
+    color: #ffd859;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    border-radius: 40px 10px;
+}
+#contenedor-cada-pag{
+    width: 80%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
