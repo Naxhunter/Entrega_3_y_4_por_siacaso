@@ -23,7 +23,7 @@ Trabajos de la semana
 {% block contenido %}
 <!-- añada el contenido personal de la página -->
 <div class="container" style="padding:15px 5px 15px 5px;">
-    <a href="#" style="margin: 100px 100px 100px 100px;">
+    <a href="{% url 'SOLAYU' %}" style="margin: 100px 100px 100px 100px;">
         <button type="button" class="btn btn-dark">Solicitud de Ayuda</button></a>
 
 
@@ -41,7 +41,7 @@ Trabajos de la semana
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="..." alt="First slide">
+            <img class="d-block w-100" src="{% static 'img/icon_emp.png' %}" alt="First slide">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
