@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<!-- hojas personales de css -->
+<link rel="stylesheet" href="{% static 'css/csspersonal/desplegar.css' %}">
+{% endblock css %}
+
+{% block tagizq %}
+<!-- añada los tag izq -->
+<a href="{%url 'LOGIN'%}" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px; ">Login</a>
+<a href="{%url 'REGISTER'%}" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold;padding-left: 10px; ">Register</a>
+<a href="#" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold;padding-left: 10px; ">Account</a>
+<a href="{%url 'IND'%}" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold;padding-left: 10px; ">Inicio</a>
+<a href="{%url 'AYUDA'%}" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px;">Help</a>
+{% endblock tagizq %}
+
+{% block titulo %}
+Trabajos anteriores
+{% endblock titulo %}
+
+{% block contenido %}
+<!-- añada el contenido personal de la página -->
+<div class="input-group" style="padding-bottom: 10px;">
+    <input type="search" class="form-control rounded" placeholder="Buscar trabajador o especialidad de trabajo" aria-label="Search"
+      aria-describedby="search-addon" />
+    <button type="button" class="btn btn-outline-primary">Buscar</button>
+  </div>
+
+<!-- Menu "trabajos anteriores" -->
+<div class="container">
+  <div class="row">
+      <!-- Contenedor esquina superior izquierda-->
+    <div class="col-sm-6" style="padding-bottom: 10px;"> 
+      <div class="imagebox">
+        <a href="#hola">
+          <img src="//placeimg.com/400/400/animals"  class="category-banner img-responsive">
+          <span class="imagebox-desc">Descripcion trabajo</span>
+        </a>
+      </div>
+    </div>
+    <!-- Contenedor esquina superior derecha -->
+    <div class="col-sm-6" style="padding-left: 50px" style="padding-bottom: 10px;">
+      <div class="imagebox">
+        <a href="#hola">
+          <img src="//placeimg.com/400/400/animals"  class="category-banner img-responsive">
+          <span class="imagebox-desc">Descripcion trabajo</span>
+        </a>
+      </div>
+    </div>
+    <!-- Esquina inferior izquierda-->
+    <div class="col-sm-6"> 
+        <div class="imagebox">
+          <a href="#hola">
+            <img src="//placeimg.com/400/400/animals"  class="category-banner img-responsive">
+            <span class="imagebox-desc">Descripcion trabajo</span>
+          </a>
+        </div>
+      </div>
+      <!-- Esquina inferior derecha-->
+      <div class="col-sm-6" style="padding-left: 50px">
+        <div class="imagebox">
+          <a href="#hola">
+            <img src="//placeimg.com/400/400/animals"  class="category-banner img-responsive">
+            <span class="imagebox-desc">Descripcion trabajo</span>
+          </a>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- Paginacion, sujeta a cambios-->
+<nav aria-label="Page navigation example" style="padding-top: 10px;">
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+    </ul>
+  </nav>
+
+{% endblock contenido %}
+
+{% block js %}
+<!-- añada sus scripts -->
+{% endblock js %}
