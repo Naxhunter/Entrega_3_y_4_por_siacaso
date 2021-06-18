@@ -19,6 +19,7 @@ Motivo del Rechazo
 {% block contenido %}
 <!-- añada el contenido personal de la página -->
 <form>
+    {% csrf_token %}
     <div class="form-group">
         <label for="exampleFormControlTextarea1" style="color:#ffd859; font-size: 20px; font-weight: bold;">Motivo:</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>

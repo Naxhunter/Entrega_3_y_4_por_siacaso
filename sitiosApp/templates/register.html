@@ -1,31 +1,62 @@
-    {% extends "base.html" %}
-    {% load static %}
-    {% block css %}
-    <!-- SOLO EXISTO PARA SER COPYPASTEADA EN CADA PÁGINA -->
-    <!-- hojas personales de css -->
-    {% endblock css %}
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<!-- SOLO EXISTO PARA SER COPYPASTEADA EN CADA PÁGINA -->
+<!-- hojas personales de css -->
+{% endblock css %}
 
-    {% block tagizq %}
-    <!-- añada los tag izq -->
-    <a href="#" class="Enlace" style="font-size: 20px;
-    text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px; ">Login</a>
-    <a href="#" class="Enlace" style="font-size: 20px;
-    text-decoration: none;color:#ffd859;font-weight: bold;padding-left: 10px; ">Register</a>
-    <a href="#" class="Enlace" style="font-size: 20px;
-    text-decoration: none;color:#ffd859;font-weight: bold;padding-left: 10px; ">Account</a>
-    <a href="{%url 'AYUDA'%}" class="Enlace" style="font-size: 20px;
+{% block tagizq %}
+<!-- añada los tag izq -->
+<a href="{%url 'IND' %}" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold;padding-left: 10px; ">Inicio</a>
+<a href="{%url 'AYUDA'%}" class="Enlace" style="font-size: 20px;
     text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px;">Help</a>
-    {% endblock tagizq %}
+{% endblock tagizq %}
 
 
-    {% block titulo %}
-    <!-- añada el título-->    algo
-    {% endblock titulo %}
-    
-    {% block contenido %}
-    <!-- añada el contenido personal de la página -->    
-    {% endblock contenido %}
-    
-    {% block js %}
-    <!-- añada sus scripts -->
-    {% endblock js %}
+{% block titulo %}
+Registro Usuario
+{% endblock titulo %}
+
+{% block contenido %}
+<!-- añada el contenido personal de la página -->
+
+<form action="" method="POST" onsubmit="return validar()">
+    {% csrf_token %}
+    <div class="form-group row">
+        <label for="emaillog" class="col-sm-2 col-form-label"
+            style="color:#ffd859; font-size: 20px; font-weight: bold;">Correo: </label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="emaillog" placeholder="Email">
+        </div>
+        <div class="error"></div>
+    </div>
+    <br>
+    <div class="form-group row">
+        <label for="names" class="col-sm-2 col-form-label"style="color:#ffd859; font-size: 20px; font-weight: bold;">Nombre: </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="" id="names" placeholder="Name">
+        </div>
+        <div class="error_2"></div>
+    </div>
+    <br>
+    <div class="form-group row">
+        <label for="passlog" class="col-sm-2 col-form-label"
+            style="color:#ffd859; font-size: 20px; font-weight: bold;">Contraseña: </label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="passlog" placeholder="Password">
+        </div>
+        <div class="error_3"></div>
+    </div>
+    <br>
+    <div clas="form-group">
+        <button type="submit" class="btn btn-dark">Ingresar</button>
+    </div>
+</form>
+{% endblock contenido %}
+
+{% block js %}
+
+<script src="{% static 'js/jspersonal/scripts.js' %}"></script>
+<!-- añada sus scripts -->
+{% endblock js %}
