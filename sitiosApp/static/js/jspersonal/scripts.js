@@ -52,7 +52,7 @@ if(num_user < 3 || num_user >30){
 return true;
 }
 function contrval(){
-    var pass_user = document.getElementById('pass').value;
+    var pass_user = document.getElementById('passlog').value;
     var num_pass = pass_user.length;
     if(num_pass < 8 || num_pass >30){
         error_1 = "";
