@@ -14,5 +14,7 @@ def login(request):
     return render(request, 'login.html')
 def register(request):
     return render(request, 'register.html')
+def anterior(request):
+    return render(request, 'trabanterior.html')
 
 # Create your views here.

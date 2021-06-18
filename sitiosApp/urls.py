@@ -10,4 +10,5 @@ urlpatterns = [
     path('AYUDA',ayuda, name="AYUDA"),
     path('LOGIN',login, name="LOGIN"),
     path('REGISTER',register, name="REGISTER"),
+    path('ANTERIORES',anterior, name='ANTERIORES'),
 ]
