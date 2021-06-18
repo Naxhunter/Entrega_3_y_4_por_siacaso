@@ -8,4 +8,6 @@ urlpatterns = [
     path('SOLAYU', sol_ayu, name='SOLAYU'),
     path('MOTREC', mot_rec, name="MOTREC"),
     path('AYUDA',ayuda, name="AYUDA"),
+    path('LOGIN',login, name="LOGIN"),
+    path('REGISTER',register, name="REGISTER"),
 ]
