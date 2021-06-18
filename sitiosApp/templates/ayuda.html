@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<!-- SOLO EXISTO PARA SER COPYPASTEADA EN CADA PÁGINA -->
+<!-- hojas personales de css -->
+{% endblock css %}
+
+{% block tagizq %}
+<!-- añada los tag izq -->
+<a href="#" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px; ">Login</a>
+<a href="#" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold;padding-left: 10px; ">Register</a>
+<a href="#" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold;padding-left: 10px; ">Account</a>
+<a href="{%url 'IND'%}" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px;">Inicio</a>
+{% endblock tagizq %}
+
+
+{% block titulo %}
+Solicitud de Ayuda
+{% endblock titulo %}
+
+{% block contenido %}
+<!-- añada el contenido personal de la página -->
+<form>
+    <div class="form-group">
+        <label for="cor" style="color:#ffd859; font-size: 20px; font-weight: bold;">Correo</label>
+        <input type="email" class="form-control" id="cor" placeholder="name@example.com">
+      </div>
+    <div class="form-group">
+        <label for="tel" style="color:#ffd859; font-size: 20px; font-weight: bold;">Teléfono</label>
+        <input type="text" class="form-control" name="" id="tel">
+    </div>
+      <div class="form-group">
+        <label for="desc" style="color:#ffd859; font-size: 20px; font-weight: bold;">Descripción</label>
+        <textarea class="form-control" id="desc" rows="3"></textarea>
+      </div>
+    <div class="form-group">
+        <label for="filee" style="color:#ffd859; font-size: 20px; font-weight: bold;">Ingrese Imagen</label>
+        <input type="file" class="form-control-file" id="filee">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+</form>
+{% endblock contenido %}
+
+{% block js %}
+<!-- añada sus scripts -->
+{% endblock js %}

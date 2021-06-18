@@ -8,5 +8,7 @@ def sol_ayu(request):
     return render(request, 'sol_ayu.html')
 def mot_rec(request):
     return render(request, 'mot_rec.html')
+def ayuda(request):
+    return render(request, 'ayuda.html')
 
 # Create your views here.
