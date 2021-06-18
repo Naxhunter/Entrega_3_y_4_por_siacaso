@@ -10,5 +10,9 @@ def mot_rec(request):
     return render(request, 'mot_rec.html')
 def ayuda(request):
     return render(request, 'ayuda.html')
+def login(request):
+    return render(request, 'login.html')
+def register(request):
+    return render(request, 'register.html')
 
 # Create your views here.
