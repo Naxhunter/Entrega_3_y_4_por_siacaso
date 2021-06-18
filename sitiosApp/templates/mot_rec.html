@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<!-- SOLO EXISTO PARA SER COPYPASTEADA EN CADA PÁGINA -->
+<!-- hojas personales de css -->
+{% endblock css %}
+
+{% block tagizq %}
+<!-- añada los tag izq -->
+<a href="{% url 'IND' %}" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px; ">Inicio</a>
+{% endblock tagizq %}
+
+
+{% block titulo %}
+Motivo del Rechazo
+{% endblock titulo %}
+
+{% block contenido %}
+<!-- añada el contenido personal de la página -->
+<form>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1" style="color:#ffd859; font-size: 20px; font-weight: bold;">Motivo:</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <br>
+        <button type="button" class="btn btn-dark">Solicitud de Ayuda</button>
+    </div>
+</form>
+{% endblock contenido %}
+
+{% block js %}
+<!-- añada sus scripts -->
+{% endblock js %}
