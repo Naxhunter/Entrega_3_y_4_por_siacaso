@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<!-- SOLO EXISTO PARA SER COPYPASTEADA EN CADA PÁGINA -->
+<!-- hojas personales de css -->
+<style>
+    .my-custom-scrollbar {
+        position: relative;
+        height: 200px;
+        overflow: auto;
+    }
+
+    .table-wrapper-scroll-y {
+        display: block;
+    }
+</style>
+{% endblock css %}
+
+{% block tagizq %}
+<!-- añada los tag izq -->
+<a href="{% url 'IND' %}" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px; ">Inicio</a>
+{% endblock tagizq %}
+
+
+{% block titulo %}
+Solicitudes de Trabajo
+{% endblock titulo %}
+
+{% block contenido %}
+<!-- añada el contenido personal de la página -->
+
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+    <table class="table table-bordered table-striped mb-0">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Trabajo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Correo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <a href="#">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mecánico de ruedas</td>
+                    <td>Mark</td>
+                    <td>amigos@Otto</td>
+                </tr>
+            </a>
+        </tbody>
+    </table>
+
+
+
+</div>
+<form action="">
+    {% csrf_token %}
+    <div class="container" style="padding:15px 5px 15px 5px;">
+        <a href="#" style="margin: 100px 100px 100px 100px;">
+            <button type="button" class="btn btn-dark">Aceptar</button></a>
+
+
+        <a href="{% url 'MTTR' %}" style="margin: 100px 100px 100px 100px;">
+            <button type="button" class="btn btn-dark">Rechazar</button></a>
+    </div>
+    <div class="container"></div>
+</form>
+<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+    <table class="table table-bordered table-striped mb-0">
+        <thead>
+            <tr>
+                
+                <th scope="col">Solicitado (FECHA):</th>
+                <th scope="col">Teléfono:</th>
+                <th scope="col">Corro:</th>
+                <th scope="col">Descripción:</th>
+                <th scope="col">Imágenes:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <a href="#">
+                <tr>
+                    <td>DD/MM/YYYY</td>
+                    <td>+56934748784</td>
+                    <td>guillemaripan@roja.cl</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minima consectetur aliquam unde! Omnis numquam enim tempore id dolores, libero dolore, nam eligendi odio consectetur totam minus dicta porro cupiditate?</td>
+                    <td>
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="{% static 'img/icon_emp.png' %}" alt="First slide">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only"><</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">></span>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </a>
+        </tbody>
+    </table>
+
+</div>
+{% endblock contenido %}
+
+{% block js %}
+<!-- añada sus scripts -->
+{% endblock js %}

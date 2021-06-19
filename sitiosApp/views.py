@@ -22,4 +22,8 @@ def cuenta(request):
     return render(request, 'cuenta.html')
 def register_work(request):
     return render(request, 'register_work.html')
+def sol_tra(request):
+    return render(request, 'sol_tra.html')
+def mot_rec_tr(request):
+    return render(request, 'mot_rec_tr.html')
 # Create your views here.
