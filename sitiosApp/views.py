@@ -26,4 +26,6 @@ def sol_tra(request):
     return render(request, 'sol_tra.html')
 def mot_rec_tr(request):
     return render(request, 'mot_rec_tr.html')
+def sol_ser(request):
+    return render(request, 'sol_ser.html')
 # Create your views here.

@@ -15,33 +15,46 @@
     text-decoration: none;color:#ffd859;font-weight: bold;padding-left: 10px; ">Account</a>
 <a href="{%url 'IND'%}" class="Enlace" style="font-size: 20px;
     text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px;">Inicio</a>
+<a href="{%url 'AYUDA'%}" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px;">Help</a>
 {% endblock tagizq %}
 
 
 {% block titulo %}
-Solicitud de Ayuda
+Solicitud de Trabajo
 {% endblock titulo %}
 
 {% block contenido %}
 <!-- añada el contenido personal de la página -->
 <form>
     <div class="form-group">
-        <label for="cor" style="color:#ffd859; font-size: 20px; font-weight: bold;">Correo</label><br>
+        <label for="cor" style="color:#ffd859; font-size: 20px; font-weight: bold;">Correo</label>
+        <br>
         <input type="email" class="form-control" id="cor" placeholder="name@example.com">
-      </div><br>
+    </div>
+
+    <br>
     <div class="form-group">
-        <label for="tel" style="color:#ffd859; font-size: 20px; font-weight: bold;">Teléfono</label><br>
+        <label for="tel" style="color:#ffd859; font-size: 20px; font-weight: bold;">Teléfono</label>
+        <br>
         <input type="text" class="form-control" name="" id="tel">
-    </div><br>
-      <div class="form-group">
-        <label for="desc" style="color:#ffd859; font-size: 20px; font-weight: bold;">Descripción</label><br>
-        <textarea class="form-control" id="desc" rows="3"></textarea>
-      </div><br>
+    </div>
+
+    <br>
     <div class="form-group">
-        <label for="filee" style="color:#ffd859; font-size: 20px; font-weight: bold;">Ingrese Imagen</label><br>
+        <label for="desc" style="color:#ffd859; font-size: 20px; font-weight: bold;">Descripción</label>
+        <br>
+        <textarea class="form-control" id="desc" rows="3"></textarea>
+    </div>
+
+    <br>
+    <div class="form-group">
+        <label for="filee" style="color:#ffd859; font-size: 20px; font-weight: bold;">Ingrese Imagen</label>
+        <br>
         <input type="file" class="form-control-file" id="filee">
-    </div><br>
-    
+    </div>
+    <br>
+
     <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
 </form>
 {% endblock contenido %}

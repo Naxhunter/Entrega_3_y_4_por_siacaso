@@ -16,4 +16,5 @@ urlpatterns = [
     path('REGWORK',register_work, name='REGWORK'),
     path('SOLTRA',sol_tra, name='SOLTRA'),
     path('MTTR',mot_rec_tr, name='MTTR'),
+    path('SOLSER',sol_ser,name="SOLSER"),
 ]
