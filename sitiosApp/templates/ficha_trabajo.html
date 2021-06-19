@@ -2,15 +2,16 @@
 {% load static %}
 {% block css %}
 <style>
-    #padding-objetos{
-      justify-content: left;
-      text-align: left;
+    #padding-objetos {
+        justify-content: left;
+        text-align: left;
     }
-    #padding-objetos2{
+
+    #padding-objetos2 {
         justify-content: right;
         text-align: left;
     }
-  </style>
+</style>
 
 {% endblock css %}
 
@@ -53,35 +54,46 @@ Trabajo numero: X
 </div>
 
 <div class="container">
-    <div class="row row-cols-3">
-        <div class="col" id="padding-objetos">
-            <label for="fecha" class="col-sm2 col-form-label"
-                style="color: black; font-size: 20px; font-weight: bold;">Fecha del trabajo : 
-            </label>
+    <div class="row row-cols-2" style="border: solid 5px white; background-color: #ffd859; border-radius: 5px;" >
+        <span class="border border-warning">
+            <div class="col" id="padding-objetos">
+                <div>
+                    <label for="fecha" class="col-sm2 col-form-label"
+                        style="color: black; font-size: 20px; font-weight: bold;">Fecha del trabajo :
+                    </label>
+                </div>
+                <div>
+                    <label for="trabajador" class="col-sm2 col-form-label"
+                        style="color: black; font-size: 20px; font-weight: bold;">Cuenta del trabajador :
+                    </label>
+                </div>
+                <div>
+                    <label for="tipotrab" class="col-sm2 col-form-label"
+                        style="color: black; font-size: 20px; font-weight: bold;">Tipo de trabajo :
+                    </label>
+                </div>
+            </div>
+        </span>
 
-            <label for="trabajador" class="col-sm2 col-form-label"
-                style="color: black; font-size: 20px; font-weight: bold;">Cuenta del trabajador : 
-            </label>
-
-            <label for="tipotrab" class="col-sm2 col-form-label"
-                style="color: black; font-size: 20px; font-weight: bold;">Tipo de trabajo : 
-            </label>
-
-        </div>
-        
-        <div class="col" id="padding-objetos2">
-            <label for="descripcion" class="col-sm2 col-form-label"
-                style="color: black; font-size: 20px; font-weight: bold;">Descripcion del trabajo : 
-            </label>
-
-            <label for="trabajador" class="col-sm2 col-form-label"
-                style="color: black; font-size: 20px; font-weight: bold;">Materiales utilizados : 
-            </label>
-            <label for="trabajador" class="col-sm2 col-form-label"
-                style="color: black; font-size: 20px; font-weight: bold;">Comentarios : 
-            </label>
-
-        </div>
+        <span class="border border-warning">
+            <div class="col" id="padding-objetos2">
+                <div>
+                    <label for="descripcion" class="col-sm2 col-form-label"
+                        style="color: black; font-size: 20px; font-weight: bold;">Descripcion del trabajo :
+                    </label>
+                </div>
+                <div>
+                    <label for="trabajador" class="col-sm2 col-form-label"
+                        style="color: black; font-size: 20px; font-weight: bold;">Materiales utilizados :
+                    </label>
+                </div>
+                <div>
+                    <label for="trabajador" class="col-sm2 col-form-label"
+                        style="color: black; font-size: 20px; font-weight: bold;">Comentarios :
+                    </label>
+                </div>
+            </div>
+        </span>
     </div>
 </div>
 
