@@ -11,7 +11,7 @@
 
     .container {
         height: 100%;
-        align-content:center;
+        align-content: center;
     }
 
     .image_outer_container {
@@ -25,7 +25,7 @@
     .image_inner_container {
         border-radius: 50%;
         padding: 5px;
-        background: #833ab4;
+        background: #b4983a;
         background: -webkit-linear-gradient(to bottom, #fce145, #fd1d1d, #eb6f27);
         background: linear-gradient(to bottom, #fce145, #fd1d1d, #eb6f27);
     }
@@ -65,16 +65,48 @@ NOMBRE USUARIO (nombre de cada user)
 
 {% block contenido %}
 <!-- añada el contenido personal de la página -->
-
 <div class="container">
-    <div class="d-flex h-100">
-        <div class="image_outer_container">
-            <div class="green_icon"></div>
-            <div class="image_inner_container">
-                <img src="{%static 'img/controls.png'%}">
+
+    <div class="container">
+        <div class="d-flex h-100">
+            <div class="image_outer_container">
+                <div class="green_icon"></div>
+                <div class="image_inner_container">
+                    <img src="{%static 'img/controls.png'%}">
+                </div>
             </div>
         </div>
+
     </div>
+
+    <ul class="list-group"
+        style="width: 60%; z-index: 2; margin-top: -300px; margin-left: 200px; height: auto; margin-top: -230px; border:solid 1px black;">
+        <li class="list-group-item" style="width: 100%; height: auto;  background-color: #ffd859;">
+            <p>Correo: </p> justo odio
+        </li>
+        <li class="list-group-item" style="width: 100%; height: auto; background-color: #ffd859;">
+            <p>Nro Servicio:</p>Dapibus ac facilisis in
+        </li>
+        <li class="list-group-item" style="width: 100%; height: auto;  background-color: #ffd859;">
+            <p>Mantenciones:</p>Morbi leo risus
+        </li>
+        <li class="list-group-item" style="width: 100%; height: auto;  background-color: #ffd859;">
+            <p>Descripción:</p>Porta ac consectetur ac
+        </li>
+    </ul>
+    <br>
+    <div class="container">
+        <form action="">
+            <div clas="form-group" style="">
+                <button type="submit" class="btn btn-dark">Subir imagen</button>
+            </div>
+        </form>
+        <br>
+        <div clas="form-group" style="">
+            <button type="submit" class="btn btn-dark">Administrar</button>
+        </div>
+    </div>
+
 </div>
 
 
