@@ -18,5 +18,6 @@ def anterior(request):
     return render(request, 'trabanterior.html')
 def frabajo(request):
     return render(request, 'ficha_trabajo.html')
-
+def cuenta(request):
+    return render(request, 'cuenta.html')
 # Create your views here.
