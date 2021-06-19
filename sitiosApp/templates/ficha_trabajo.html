@@ -36,10 +36,10 @@ Trabajo numero: X
 
 
 {% block contenido %}
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width:600px; height:500px;  border: 3px solid black; margin-left:200px;">
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100" src="{% static 'img/icon_emp.png' %}" alt="First slide">
+        <div class="carousel-item active" >
+            <img class="d-block w-100" src="{% static 'img/icon_emp.png' %}" alt="First slide"style="width:800px; height:500px;">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -52,7 +52,7 @@ Trabajo numero: X
     </a>
     <!-- Carrusel -->
 </div>
-
+<br>
 <div class="container">
     <div class="row row-cols-2" style="border: solid 5px white; background-color: #ffd859; border-radius: 5px;" >
         <span class="border border-warning">
