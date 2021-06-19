@@ -20,4 +20,6 @@ def frabajo(request):
     return render(request, 'ficha_trabajo.html')
 def cuenta(request):
     return render(request, 'cuenta.html')
+def register_work(request):
+    return render(request, 'register_work.html')
 # Create your views here.

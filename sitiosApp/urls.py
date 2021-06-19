@@ -13,4 +13,5 @@ urlpatterns = [
     path('ANTERIORES',anterior, name='ANTERIORES'),
     path('FICHATRABAJO',frabajo, name='FICHATRABAJO'),
     path('CUENTA', cuenta, name='CUENTA'),
+    path('REGWORK',register_work,'REGWORK'),
 ]

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<!-- SOLO EXISTO PARA SER COPYPASTEADA EN CADA PÁGINA -->
+<!-- hojas personales de css -->
+{% endblock css %}
+
+{% block tagizq %}
+<!-- añada los tag izq -->
+<a href="{% url 'LOGIN'%}" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px; ">Login</a>
+<a href="{%url 'REGISTER'%}" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold;padding-left: 10px; ">Register</a>
+<a href="{% url 'CUENTA' %}" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold;padding-left: 10px; ">Account</a>
+<a href="{%url 'AYUDA'%}" class="Enlace" style="font-size: 20px;
+    text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px;">Help</a>
+{% endblock tagizq %}
+
+
+{% block titulo %}
+<!-- añada el título--> algo
+{% endblock titulo %}
+
+{% block contenido %}
+<!-- añada el contenido personal de la página -->
+{% endblock contenido %}
+
+{% block js %}
+<!-- añada sus scripts -->
+{% endblock js %}
