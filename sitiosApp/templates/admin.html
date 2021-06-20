@@ -14,13 +14,43 @@ text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px;">Inic
 
 
 {% block titulo %}
-<!-- añada el título--> 
+<!-- añada el título-->
 Administrar
 {% endblock titulo %}
 
 {% block contenido %}
-<!-- añada el contenido personal de la página -->    
- <img src="{% static 'img/ayuda.png'%}" class="img-fluid" alt="Eniun">
+<!-- añada el contenido personal de la página -->
+<div class="container" style="padding: 5px 5px 5px 5px;">
+    <div style="display: inline-block; padding: 3px 3px 3px 3px;justify-content: center; border: 5px solid #806c17;">
+        <a href="{%url 'SOLAYU'%}">
+            <img src="{% static 'img/ayuda.png'%}" class="img-fluid" alt="Eniun" style="width: 250px; height: 250px;">
+        </a>
+        <br>
+        <span style="color:#806c17; font-weight: bold;">Solicitud Ayuda</span>
+    </div>
+    <div style="display: inline-block;padding: 3px 3px 3px 3px;justify-content: center; border: 5px solid #806c17;">
+        <a href="{%url 'SOLTRA'%}">
+            <img src="{% static 'img/trabajo.png'%}" class="img-fluid" alt="Eniun" style="width: 250px; height: 250px;">
+        </a>
+        
+        <br>
+        <span style="color:#806c17; font-weight: bold;">Solicitud Trabajo</span>
+    </div>
+    <div style="display: inline-block;padding: 3px 3px 3px 3px;justify-content: center; border: 5px solid #806c17;">
+        <a href="{%url 'REGWORK'%}">
+            <img src="{% static 'img/icon_emp.png'%}" class="img-fluid" alt="Eniun" style="width: 250px; height: 250px;">
+        </a>
+        
+        <br>
+        <span style="color:#806c17; font-weight: bold;">Registrar Trabajador</span>
+    </div>
+
+
+
+
+
+
+</div>
 {% endblock contenido %}
 
 {% block js %}
