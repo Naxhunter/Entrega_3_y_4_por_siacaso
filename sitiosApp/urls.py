@@ -17,4 +17,5 @@ urlpatterns = [
     path('SOLTRA',sol_tra, name='SOLTRA'),
     path('MTTR',mot_rec_tr, name='MTTR'),
     path('SOLSER',sol_ser,name="SOLSER"),
+    path('ADM',admini,name="ADM"),
 ]

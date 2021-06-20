@@ -28,4 +28,6 @@ def mot_rec_tr(request):
     return render(request, 'mot_rec_tr.html')
 def sol_ser(request):
     return render(request, 'sol_ser.html')
+def admini(request):
+    return render(request, 'admin.html')
 # Create your views here.

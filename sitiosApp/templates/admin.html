@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<!-- SOLO EXISTO PARA SER COPYPASTEADA EN CADA PÁGINA -->
+<!-- hojas personales de css -->
+{% endblock css %}
+
+{% block tagizq %}
+<!-- añada los tag izq -->
+
+<a href="{%url 'IND'%}" class="Enlace" style="font-size: 20px;
+text-decoration: none;color:#ffd859;font-weight: bold; padding-left: 10px;">Inicio</a>
+{% endblock tagizq %}
+
+
+{% block titulo %}
+<!-- añada el título--> 
+Administrar
+{% endblock titulo %}
+
+{% block contenido %}
+<!-- añada el contenido personal de la página -->    
+ <img src="{% static 'img/ayuda.png'%}" class="img-fluid" alt="Eniun">
+{% endblock contenido %}
+
+{% block js %}
+<!-- añada sus scripts -->
+{% endblock js %}
