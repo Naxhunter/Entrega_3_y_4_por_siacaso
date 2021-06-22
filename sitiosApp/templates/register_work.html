@@ -21,7 +21,7 @@ Registrar trabajador
 {% block contenido %}
 <!-- añada el contenido personal de la página -->
 
-<form action="" method="POST" onsubmit="return validar_trabajador()">
+<form action="{%url 'REGWORK'%}" method="POST" onsubmit="return validar_trabajador()">
     {% csrf_token %}
     <div class="form-group row">
         <label for="txtRut" class="col-sm-2 col-form-label"

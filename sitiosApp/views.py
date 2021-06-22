@@ -26,13 +26,33 @@ def register(request):
         usuario.save()
         return render(request, 'register.html', contexto)
     return render(request, 'register.html')
+
 def anterior(request):
     return render(request, 'trabanterior.html')
 def frabajo(request):
     return render(request, 'ficha_trabajo.html')
 def cuenta(request):
     return render(request, 'cuenta.html')
+
 def register_work(request):
+    if(request.POST):
+        rut = request.POST.get('txtRut')
+        nombre = request.POST.get('txtNombre')
+        email = request.POST.get('txtEmail')
+        passw = request.POST.get('txtPasslog')
+        esp = request.POST.get('txtEsp')
+        tel = request.POST.get('txtTel')
+        usuario = CategoriaUtrabajador(
+            rut = rut,
+            nombre = nombre,
+            email= email,
+            contrasena= passw,
+            especialidad=esp,
+            telefono=tel
+        )
+        contexto ={"mensaje":"Registrado con exito"}
+        usuario.save()
+        return render(request, 'register_work.html', contexto)
     return render(request, 'register_work.html')
 def sol_tra(request):
     return render(request, 'sol_tra.html')
