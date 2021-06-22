@@ -78,7 +78,7 @@ return true;
 }
 function descripcion(){
     var desc = document.getElementById('txtDesc').value;
-    var vacio = desc;
+    var vacio = desc.trim();
     var contable = vacio.length;
     if(contable>350 || contable<10){
         var error = "Su descripción no puede superar los 350 caracteres, ni tener menos de 10 caracteres.";
