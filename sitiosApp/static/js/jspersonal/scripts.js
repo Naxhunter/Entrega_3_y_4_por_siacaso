@@ -22,6 +22,7 @@ if(contar<6){
     document.getElementById('error').innerHTML = error;
     return false;
 }
+document.getElementById('error').innerHTML = "";
 return true;
 }
 function nameval(){
@@ -29,12 +30,11 @@ var name_user = document.getElementById('txtNombre').value;
 var quitar = name_user.trim();
 var num_user = quitar.length;
 if(num_user < 3 || num_user >30){
-    error_1 = "";
     error = "Mínimo 3 caracteres para el nombre y máximo 30 caracteres.";
-    document.getElementById('error').innerHTML = error_1;
     document.getElementById('error_2').innerHTML = error;
     return false;
 }
+document.getElementById('error_2').innerHTML = "";
 return true;
 }
 function contrval(){
@@ -44,10 +44,9 @@ function contrval(){
     if(num_pass < 8 || num_pass >30){
         error_1 = "";
         error = "Mínimo 8 caracteres para la contraseña y máximo 30 caracteres.";
-        document.getElementById('error').innerHTML = error_1;
-        document.getElementById('error_2').innerHTML = error_1;
         document.getElementById('error_3').innerHTML = error;
         return false;
     }
+    document.getElementById('error_3').innerHTML = "";
     return true;
 }
