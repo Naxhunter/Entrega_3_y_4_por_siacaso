@@ -26,32 +26,33 @@ Solicitud de Trabajo
 
 {% block contenido %}
 <!-- añada el contenido personal de la página -->
-<form>
+<form action="{%url 'SOLSER' %}" method="POST" onsubmit="return solicitudt()">
+    {% csrf_token %}
     <div class="form-group">
-        <label for="cor" style="color:#ffd859; font-size: 20px; font-weight: bold;">Correo</label>
+        <label for="txtEmail" style="color:#ffd859; font-size: 20px; font-weight: bold;">Correo</label>
         <br>
-        <input type="email" class="form-control" id="cor" placeholder="name@example.com">
+        <input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="name@example.com">
     </div>
 
     <br>
     <div class="form-group">
-        <label for="tel" style="color:#ffd859; font-size: 20px; font-weight: bold;">Teléfono</label>
+        <label for="txtTel" style="color:#ffd859; font-size: 20px; font-weight: bold;">Teléfono</label>
         <br>
-        <input type="text" class="form-control" name="" id="tel">
+        <input type="text" class="form-control" name="txtTel" id="txtTel">
     </div>
 
     <br>
     <div class="form-group">
-        <label for="desc" style="color:#ffd859; font-size: 20px; font-weight: bold;">Descripción</label>
+        <label for="txtDesc" style="color:#ffd859; font-size: 20px; font-weight: bold;">Descripción</label>
         <br>
-        <textarea class="form-control" id="desc" rows="3"></textarea>
+        <textarea class="form-control" name="txtDesc" id="txtDesc" rows="3"></textarea>
     </div>
 
     <br>
     <div class="form-group">
-        <label for="filee" style="color:#ffd859; font-size: 20px; font-weight: bold;">Ingrese Imagen</label>
+        <label for="txtFile" style="color:#ffd859; font-size: 20px; font-weight: bold;">Ingrese Imagen</label>
         <br>
-        <input type="file" class="form-control-file" id="filee">
+        <input type="file" class="form-control-file" id="txtFile" name="txtFile">
     </div>
     <br>
 
@@ -60,5 +61,7 @@ Solicitud de Trabajo
 {% endblock contenido %}
 
 {% block js %}
-<!-- añada sus scripts -->
+
+
+<script src="{% static 'js/jspersonal/solicitudes.js' %}"></script>
 {% endblock js %}
