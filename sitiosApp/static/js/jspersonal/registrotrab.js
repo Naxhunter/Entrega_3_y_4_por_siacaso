@@ -55,6 +55,7 @@ if ( dv != dv_usuario ) {
     return false;
 
 }
+document.getElementById('error_0').innerHTML = "";
 return true;
 }
 function email(){
@@ -66,6 +67,7 @@ if(dos<6){
     document.getElementById('error_1').innerHTML = error;
     return false;
 }
+document.getElementById('error_1').innerHTML = "";
 return true;
 }
 function nombre(){
@@ -73,10 +75,10 @@ var name_user = document.getElementById('txtNombre').value;
 var num_user = name_user.length;
 if(num_user < 3 || num_user >30){
     var texto = "";
-    var error = "Mínimo 3 caracteres para el nombre y máximo 30 caracteres."
+    var error = "Mínimo 3 caracteres para el nombre y máximo 30 caracteres.";
     document.getElementById('error_2').innerHTML = error;
     return false;
-}
+}document.getElementById('error_2').innerHTML = "";
 return true;
 }
 function contra(){
@@ -84,10 +86,10 @@ var pass_user = document.getElementById('txtPasslog').value;
 var num_pass = pass_user.length;
 if(num_pass < 8 || num_pass >30){
     var texto = "";
-    var error = "Mínimo 8 caracteres para la contraseña y máximo 30 caracteres."
+    var error = "Mínimo 8 caracteres para la contraseña y máximo 30 caracteres.";
     document.getElementById('error_3').innerHTML = error;
     return false;
-}
+}document.getElementById('error_3').innerHTML = "";
 return true;
 }
 function especialidad(){
@@ -98,7 +100,7 @@ if(num_esp < 5){
     var error = "Inserte al menos 5 caracteres para especialidad.";
     document.getElementById('error_4').innerHTML = error;
     return false;
-}
+}document.getElementById('error_4').innerHTML = "";
 return true;
 }
 function telefono(){
@@ -150,6 +152,6 @@ for (let index = 0; index <= num_tel ; index++) {
         index = num_tel+1;
         return false;
     }
-}
+}document.getElementById('error_5').innerHTML = "";
 return true;
 }
