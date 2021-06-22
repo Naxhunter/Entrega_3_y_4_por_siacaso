@@ -16,5 +16,13 @@ class CategoriaUtrabajador(models.Model):
     telefono= models.IntegerField()
     def __str__(self):
         return self.nombre
+class solicitudtrabajo(models.Model):
+    correo=models.CharField(primary_key=True, max_length=30)
+    telefono=models.IntegerField()
+    descripcion=models.TextField(max_length=350)
+    imagen=models.ImageField(upload_to='solitudest', null=True)
+    def __str__(self):
+        return self.correo
+        
 
 
