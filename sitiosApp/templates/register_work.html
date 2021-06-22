@@ -24,53 +24,57 @@ Registrar trabajador
 <form action="" method="POST" onsubmit="return validar_trabajador()">
     {% csrf_token %}
     <div class="form-group row">
-        <label for="names" class="col-sm-2 col-form-label"style="color:#ffd859; font-size: 20px; font-weight: bold;">Rut: </label>
+        <label for="txtRut" class="col-sm-2 col-form-label"
+            style="color:#ffd859; font-size: 20px; font-weight: bold;">Rut: </label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" id="name" placeholder="Run">
+            <input type="text" class="form-control" name="txtRut" id="txtRut" placeholder="Run">
         </div>
-        <div id="error_2"></div>
+        <div id="error_0"></div>
     </div>
     <br>
     <div class="form-group row">
-        <label for="emaillog" class="col-sm-2 col-form-label"
+        <label for="txtEmail" class="col-sm-2 col-form-label"
             style="color:#ffd859; font-size: 20px; font-weight: bold;">Correo: </label>
         <div class="col-sm-10">
-            <input type="email" class="form-control" id="emaillog" placeholder="Email">
+            <input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="Email">
         </div>
         <div class="error_1"></div>
     </div>
     <br>
     <div class="form-group row">
-        <label for="passlog" class="col-sm-2 col-form-label"
+        <label for="txtNombre" class="col-sm-2 col-form-label"
+            style="color:#ffd859; font-size: 20px; font-weight: bold;">Nombre: </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="txtNombre" id="txtNombre" placeholder="Name">
+        </div>
+        <div id="error_2"></div>
+    </div>
+    <br>
+    <div class="form-group row">
+        <label for="txtPasslog" class="col-sm-2 col-form-label"
             style="color:#ffd859; font-size: 20px; font-weight: bold;">Contraseña: </label>
         <div class="col-sm-10">
-            <input type="password" class="form-control" id="passlog" placeholder="Password">
+            <input type="password" class="form-control" id="txtPasslog" name="txtPasslog" placeholder="Password">
         </div>
-        <div class="error_1"></div>
+        <div class="error_3"></div>
     </div>
     <br>
     <div class="form-group row">
-        <label for="names" class="col-sm-2 col-form-label"style="color:#ffd859; font-size: 20px; font-weight: bold;">Nombre: </label>
+        <label for="txtEsp" class="col-sm-2 col-form-label"
+            style="color:#ffd859; font-size: 20px; font-weight: bold;">Especialidad: </label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+            <input type="text" class="form-control" name="txtEsp" id="txtEsp" placeholder="Specialty">
         </div>
-        <div id="error_2"></div>
+        <div id="error_4"></div>
     </div>
     <br>
     <div class="form-group row">
-        <label for="names" class="col-sm-2 col-form-label"style="color:#ffd859; font-size: 20px; font-weight: bold;">Especialidad: </label>
+        <label for="txtTel" class="col-sm-2 col-form-label"
+            style="color:#ffd859; font-size: 20px; font-weight: bold;">Teléfono: </label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" id="name" placeholder="Specialty">
+            <input type="text" class="form-control" name="txtTel" id="txtTel" placeholder="Telephone">
         </div>
-        <div id="error_2"></div>
-    </div>
-    <br>
-    <div class="form-group row">
-        <label for="names" class="col-sm-2 col-form-label"style="color:#ffd859; font-size: 20px; font-weight: bold;">Teléfono: </label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" name="name" id="name" placeholder="Telephone">
-        </div>
-        <div id="error_2"></div>
+        <div id="error_5"></div>
     </div>
     <br>
     <div clas="form-group">

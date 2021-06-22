@@ -28,7 +28,7 @@ function validar_trabajador(){
     return true;
 }
 function rut(){
-var rut = document.getElementById('rut').value;
+var rut = document.getElementById('txtRut').value;
 var num = 3;
 var suma = 0;
 for (let index = 0; index < 8; index++) {
@@ -58,7 +58,7 @@ if ( dv != dv_usuario ) {
 return true;
 }
 function email(){
-var email = document.getElementById('email').value;
+var email = document.getElementById('txtEmail').value;
 var dos = email.length;
 if(dos<6){
     var texto = "";
@@ -69,7 +69,7 @@ if(dos<6){
 return true;
 }
 function nombre(){
-var name_user = document.getElementById('name').value;
+var name_user = document.getElementById('txtNombre').value;
 var num_user = name_user.length;
 if(num_user < 3 || num_user >30){
     var texto = "";
@@ -80,7 +80,7 @@ if(num_user < 3 || num_user >30){
 return true;
 }
 function contra(){
-var pass_user = document.getElementById('pass').value;
+var pass_user = document.getElementById('txtPasslog').value;
 var num_pass = pass_user.length;
 if(num_pass < 8 || num_pass >30){
     var texto = "";
@@ -91,7 +91,7 @@ if(num_pass < 8 || num_pass >30){
 return true;
 }
 function especialidad(){
-var esp_user = document.getElementById('especialidad').value;
+var esp_user = document.getElementById('txtEsp').value;
 var num_esp = esp_user.length;
 if(num_esp < 5){
     var texto = "";
@@ -102,7 +102,7 @@ if(num_esp < 5){
 return true;
 }
 function telefono(){
-var tel_user = document.getElementById('telefono').value;
+var tel_user = document.getElementById('txtTel').value;
 var num_tel = tel_user.length;
 if(num_tel<8 || num_tel>8){
     var texto = "";
