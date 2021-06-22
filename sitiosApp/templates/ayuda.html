@@ -24,28 +24,33 @@ Solicitud de Ayuda
 
 {% block contenido %}
 <!-- añada el contenido personal de la página -->
-<form>
+<form action="{%url 'AYUDA' %}" method="POST" onsubmit="return solicituda()" enctype="multipart/form-data">
+    {% csrf_token %}
     <div class="form-group">
-        <label for="cor" style="color:#ffd859; font-size: 20px; font-weight: bold;">Correo</label><br>
-        <input type="email" class="form-control" id="cor" placeholder="name@example.com">
-      </div><br>
+        <label for="txtEmail" style="color:#ffd859; font-size: 20px; font-weight: bold;">Correo</label><br>
+        <input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="name@example.com">
+    </div>
+    <div id="error_0"></div><br>
     <div class="form-group">
-        <label for="tel" style="color:#ffd859; font-size: 20px; font-weight: bold;">Teléfono</label><br>
-        <input type="text" class="form-control" name="" id="tel">
+        <label for="txtTel" style="color:#ffd859; font-size: 20px; font-weight: bold;">Teléfono</label><br>
+        <input type="text" class="form-control" name="txtTel" id="txtTel">
+    </div>
+    <div id="error_1"></div><br>
+    <div class="form-group">
+        <label for="txtDesc" style="color:#ffd859; font-size: 20px; font-weight: bold;">Descripción</label><br>
+        <textarea class="form-control" id="txtDesc" name="txtDesc" rows="3"></textarea>
+    </div>
+    <div id="error_2"></div><br>
+    <div class="form-group">
+        <label for="txtFile" style="color:#ffd859; font-size: 20px; font-weight: bold;">Ingrese Imagen</label><br>
+        <input type="file" class="form-control-file" id="txtFile" name="txtFile">
     </div><br>
-      <div class="form-group">
-        <label for="desc" style="color:#ffd859; font-size: 20px; font-weight: bold;">Descripción</label><br>
-        <textarea class="form-control" id="desc" rows="3"></textarea>
-      </div><br>
-    <div class="form-group">
-        <label for="filee" style="color:#ffd859; font-size: 20px; font-weight: bold;">Ingrese Imagen</label><br>
-        <input type="file" class="form-control-file" id="filee">
-    </div><br>
-    
+
     <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
 </form>
 {% endblock contenido %}
 
 {% block js %}
 <!-- añada sus scripts -->
+<script src="{% static 'js/jspersonal/solicitudes.js' %}"></script>
 {% endblock js %}

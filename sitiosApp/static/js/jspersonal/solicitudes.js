@@ -13,6 +13,21 @@ function solicitudt(){
     }
     return true;
 }
+function solicituda(){
+    var validar = correo();
+    if(validar==false){
+        return false;
+    }
+    validar = telefono();
+    if(validar==false){
+        return false;
+    }
+    validar = descripcion();
+    if(validar==false){
+        return false;
+    }
+    return true;
+}
 function correo(){
     var email = document.getElementById('txtEmail').value;
     var vacio = email.trim();

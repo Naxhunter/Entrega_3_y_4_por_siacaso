@@ -9,6 +9,20 @@ def sol_ayu(request):
 def mot_rec(request):
     return render(request, 'mot_rec.html')
 def ayuda(request):
+    if(request.POST):
+        correo = request.POST.get("txtEmail")
+        telefono = request.POST.get("txtTel")
+        descripcion = request.POST.get("txtDesc")
+        imagen = request.FILES.get("txtFile")
+        solicitud = solicitudayuda(
+            correo= correo,
+            telefono= telefono,
+            descripcion= descripcion,
+            imagen=imagen
+        )
+        contexto={"mensaje":"Solictud recibida"}
+        solicitud.save()
+        return render(request,"ayuda.html", contexto)
     return render(request, 'ayuda.html')
 def login(request):
     return render(request, 'login.html')
