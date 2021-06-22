@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import *
 def inicio(request):
     return render(request, 'index.html')
 def base(request):
@@ -13,6 +13,18 @@ def ayuda(request):
 def login(request):
     return render(request, 'login.html')
 def register(request):
+    if(request.POST):
+        nombre = request.POST.get('txtNombre')
+        email = request.POST.get('txtEmail')
+        passw = request.POST.get('txtPasslog')
+        usuario = CategoriaUnormal(
+            nombre= nombre,
+            email= email,
+            contrasena= passw
+        )
+        contexto ={"mensaje":"Registrado con exito"}
+        usuario.save()
+        return render(request, 'register.html', contexto)
     return render(request, 'register.html')
 def anterior(request):
     return render(request, 'trabanterior.html')

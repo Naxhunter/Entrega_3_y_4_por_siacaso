@@ -21,13 +21,13 @@ Registro Usuario
 {% block contenido %}
 <!-- añada el contenido personal de la página -->
 
-<form action="" method="POST" onsubmit="return validar()">
+<form action="{%url 'REGISTER'%}" method="POST" onsubmit="return validar()">
     {% csrf_token %}
     <div class="form-group row">
-        <label for="email" class="col-sm-2 col-form-label"
+        <label for="txtEmail" class="col-sm-2 col-form-label"
             style="color:#ffd859; font-size: 20px; font-weight: bold;">Correo: </label>
         <div class="col-sm-10">
-            <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+            <input type="email" class="form-control" id="txtEmail" placeholder="Email" name="txtEmail">
         </div>
         <div id="error"></div>
     </div>
@@ -41,10 +41,10 @@ Registro Usuario
     </div>
     <br>
     <div class="form-group row">
-        <label for="passlog" class="col-sm-2 col-form-label"
+        <label for="txtPasslog" class="col-sm-2 col-form-label"
             style="color:#ffd859; font-size: 20px; font-weight: bold;">Contraseña: </label>
         <div class="col-sm-10">
-            <input type="password" class="form-control" id="passlog" name="passlog" placeholder="Password">
+            <input type="password" class="form-control" id="txtPasslog" name="txtPasslog" placeholder="Password">
         </div>
         <div cid="error_3"></div>
     </div>

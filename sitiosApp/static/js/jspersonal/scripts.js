@@ -14,7 +14,7 @@ function validar(){
     return true;
 }
 function emailval(){
-var email = document.getElementById('email').value;
+var email = document.getElementById('txtEmail').value;
 var quitar = email.trim();
 var contar = quitar.length;
 if(contar<6){
@@ -38,7 +38,7 @@ if(num_user < 3 || num_user >30){
 return true;
 }
 function contrval(){
-    var pass_user = document.getElementById('passlog').value;
+    var pass_user = document.getElementById('txtPasslog').value;
     var quitar = pass_user.trim();
     var num_pass = quitar.length;
     if(num_pass < 8 || num_pass >30){
