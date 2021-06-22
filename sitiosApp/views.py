@@ -59,6 +59,20 @@ def sol_tra(request):
 def mot_rec_tr(request):
     return render(request, 'mot_rec_tr.html')
 def sol_ser(request):
+    if(request.POST):
+        correo = request.POST.get("txtEmail")
+        telefono = request.POST.get("txtTel")
+        descripcion = request.POST.get("txtDesc")
+        imagen = request.FILES.get("txtFile")
+        solicitud = solicitudtrabajo(
+            correo= correo,
+            telefono= telefono,
+            descripcion= descripcion,
+            imagen=imagen
+        )
+        contexto={"mensaje":"Solictud recibida"}
+        solicitud.save()
+        return render(request,"sol_ser.html", contexto)
     return render(request, 'sol_ser.html')
 def admini(request):
     return render(request, 'admin.html')

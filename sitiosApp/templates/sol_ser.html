@@ -26,7 +26,7 @@ Solicitud de Trabajo
 
 {% block contenido %}
 <!-- añada el contenido personal de la página -->
-<form action="{%url 'SOLSER' %}" method="POST" onsubmit="return solicitudt()">
+<form action="{%url 'SOLSER' %}" method="POST" onsubmit="return solicitudt()" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="form-group">
         <label for="txtEmail" style="color:#ffd859; font-size: 20px; font-weight: bold;">Correo</label>
